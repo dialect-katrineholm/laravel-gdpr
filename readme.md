@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/dialect-katrineholm/laravel-gdpr-compliance.svg?branch=master)](https://travis-ci.org/dialect-katrineholm/laravel-gdpr-compliance)
 [![StyleCI](https://github.styleci.io/repos/133474603/shield?branch=master)](https://github.styleci.io/repos/133474603)
+[![Coverage Status](https://coveralls.io/repos/github/dialect-katrineholm/laravel-gdpr-compliance/badge.svg?branch=master)](https://coveralls.io/github/dialect-katrineholm/laravel-gdpr-compliance?branch=master)
 # GDPR compliant data handling with ease
 
 This package helps you get compliant with GDPR;
