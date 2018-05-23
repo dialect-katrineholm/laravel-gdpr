@@ -19,10 +19,10 @@ class GdprServiceProvider extends ServiceProvider
         // Load standard issue migrations
         $timestamp = date('Y_m_d_His');
         $this->publishes([
-	        __DIR__ . '/migrations/add_gdpr_to_users_table.php' => database_path('migrations/' . $timestamp . '_add_gdpr_to_users_table.php'),
+            __DIR__.'/migrations/add_gdpr_to_users_table.php' => database_path('migrations/'.$timestamp.'_add_gdpr_to_users_table.php'),
             __DIR__.'/views/message.blade.php' => base_path('resources/views/gdpr/message.blade.php'),
             __DIR__.'/middleware/RedirectIfUnansweredTerms.php' => base_path('app/Http/Middleware/RedirectIfUnansweredTerms.php'),
-	        __DIR__.'/Http/Controllers/GdprController.php' => base_path('app/Http/Controllers/GdprController.php'),
+            __DIR__.'/Http/Controllers/GdprController.php' => base_path('app/Http/Controllers/GdprController.php'),
         ], 'gdpr-consent');
     }
 
