@@ -34,7 +34,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
      */
     protected $customer;
 
-     /**
+    /**
      * A dummy user model.
      *
      * @var customer
@@ -207,7 +207,7 @@ class Customer extends Model
     protected $table = 'customers';
     protected $gdprWith = ['orders'];
     protected $encrypted = ['name', 'email', 'adress'];
- 
+
     use Anonymizable, EncryptsAttributes;
 
     protected $gdprAnonymizableFields = ['name' => 'Anonymized User'];

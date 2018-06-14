@@ -8,17 +8,15 @@ namespace Dialect\Gdpr;
  * @author  r4z0rFr <erwankreutz@gmail.com>
  * @license The MIT License
  */
-
 class EncryptedTest extends TestCase
 {
-
     /** @test */
     public function test_if_it_decrypt_a_complete_model_to_an_array()
     {
         $originalValues = [
-            "name"          => "TestUser",
-            "email"         => "test@email.com",
-            "adress"        => "30 test adress",
+            'name'          => 'TestUser',
+            'email'         => 'test@email.com',
+            'adress'        => '30 test adress',
         ];
 
         $decryptedArray = $this->customer->decryptToArray();
@@ -33,8 +31,8 @@ class EncryptedTest extends TestCase
     {
         $decryptedCollection = $this->customer->decryptToCollection();
 
-        $this->assertEquals("TestUser", $decryptedCollection->name);
-        $this->assertEquals("test@email.com", $decryptedCollection->email);
-        $this->assertEquals("30 test adress", $decryptedCollection->adress);
+        $this->assertEquals('TestUser', $decryptedCollection->name);
+        $this->assertEquals('test@email.com', $decryptedCollection->email);
+        $this->assertEquals('30 test adress', $decryptedCollection->adress);
     }
 }
