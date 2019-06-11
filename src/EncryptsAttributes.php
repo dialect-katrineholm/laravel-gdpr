@@ -4,7 +4,6 @@ namespace Dialect\Gdpr;
 
 use Illuminate\Support\Facades\Crypt;
 
-
 trait EncryptsAttributes
 {
     /**
@@ -33,9 +32,10 @@ trait EncryptsAttributes
      */
     protected function decryptValue($value)
     {
-        if ($value !== null && !empty($value)) {
+        if ($value !== null && ! empty($value)) {
             return Crypt::decrypt($value);
         }
+
         return $value;
     }
 
@@ -86,6 +86,7 @@ trait EncryptsAttributes
                 $model[$key] = decrypt($model[$key]);
             }
         }
+
         return $model;
     }
 
