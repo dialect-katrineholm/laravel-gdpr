@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use Dialect\Gdpr\Http\Requests\GdprDownload;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
-use Dialect\Gdpr\Http\Requests\GdprDownload;
 
 class GdprController extends Controller
 {

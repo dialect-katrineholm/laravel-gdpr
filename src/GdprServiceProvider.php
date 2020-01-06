@@ -2,10 +2,10 @@
 
 namespace Dialect\Gdpr;
 
+use Dialect\Gdpr\Commands\AnonymizeInactiveUsers;
+use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Console\Scheduling\Schedule;
-use Dialect\Gdpr\Commands\AnonymizeInactiveUsers;
 
 class GdprServiceProvider extends ServiceProvider
 {

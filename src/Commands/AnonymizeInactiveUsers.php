@@ -37,7 +37,7 @@ class AnonymizeInactiveUsers extends Command
      */
     public function handle()
     {
-        if(!config('gdpr.enabled')) {
+        if (! config('gdpr.enabled')) {
             return;
         }
 
@@ -48,7 +48,7 @@ class AnonymizeInactiveUsers extends Command
         foreach ($anonymizableUsers as $user) {
             $user->anonymize();
             $user->update([
-                  'isAnonymized' => true,
+                'isAnonymized' => true,
             ]);
         }
     }
